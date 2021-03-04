@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/checkKeyFragment">
+
+    <fragment
+        android:id="@+id/checkKeyFragment"
+        android:name="com.alex.quickapp.fragment.CheckKeyFragment"
+        android:label="CheckKeyFragment">
+        <action
+            android:id="@+id/action_checkKeyFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_checkKeyFragment_to_scanResultFragment2"
+            app:destination="@id/scanResultFragment" />
+        <action
+            android:id="@+id/action_checkKeyFragment_to_shipSuccessFragment"
+            app:destination="@id/shipSuccessFragment" />
+        <action
+            android:id="@+id/action_checkKeyFragment_to_shipFailFragment"
+            app:destination="@id/shipFailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.alex.quickapp.fragment.ScanFragment"
+        android:label="ScanFragment" />
+    <fragment
+        android:id="@+id/scanResultFragment"
+        android:name="com.alex.quickapp.fragment.ScanResultFragment"
+        android:label="ScanResultFragment" />
+    <fragment
+        android:id="@+id/shipSuccessFragment"
+        android:name="com.alex.quickapp.fragment.ShipSuccessFragment"
+        android:label="ShipSuccessFragment" />
+    <fragment
+        android:id="@+id/shipFailFragment"
+        android:name="com.alex.quickapp.fragment.ShipFailFragment"
+        android:label="ShipFailFragment" />
+</navigation>
